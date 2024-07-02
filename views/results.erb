@@ -1,0 +1,10 @@
+
+<h1><%=@page%> Results</h1>
+
+<%=params%>
+
+<% params.keys.each do |key| %>
+  <p><%=key.capitalize%><br><%=params.fetch(key).to_f%></p>
+<% end %>
+
+<p><a href="/square/new">Calculate another <%=@page.downcase%></a>
